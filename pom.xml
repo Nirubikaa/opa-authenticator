@@ -25,8 +25,8 @@
         <version>1</version>
     </parent>
 
-    <groupId>org.wso2.carbon.extension.identity.authenticator</groupId>
-    <artifactId>org.wso2.carbon.extension.identity.authenticator.opa</artifactId>
+    <groupId>org.wso2.carbon.identity.application.authz.opa</groupId>
+    <artifactId>identity-application-authz-opa</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>WSO2 Carbon Extension - OPA Pom</name>
@@ -122,8 +122,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <modules>
-                <module>component/org.wso2.carbon.extension.identity.authenticator.opa.connector</module>
-                <!--<module>features/org.wso2.carbon.identity.application.authz.xacml.feature</module>-->
+                <module>component/org.wso2.carbon.identity.application.authz.opa</module>
             </modules>
 
         </profile>
@@ -137,25 +136,15 @@
                 <version>${carbon.identity.framework.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.wso2.balana</groupId>
-                <artifactId>org.wso2.balana.utils</artifactId>
-                <version>${balana.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.framework</groupId>
-                <artifactId>org.wso2.carbon.identity.entitlement</artifactId>
-                <version>${carbon.identity.framework.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.carbon.identity.framework</groupId>
-                <artifactId>org.wso2.carbon.identity.entitlement.common</artifactId>
-                <version>${carbon.identity.framework.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>org.apache.felix.scr.ds-annotations</artifactId>
                 <version>${apache.felix.scr.ds.annotations.version}</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.json.wso2</groupId>
+                <artifactId>json</artifactId>
+                <version>3.0.0.wso2v1</version>
             </dependency>
             <dependency>
                 <groupId>org.testng</groupId>
@@ -314,5 +303,6 @@
         <jacoco.version>0.7.9</jacoco.version>
         <maven.surefire.plugin.version>2.18.1</maven.surefire.plugin.version>
         <powermock.version>1.6.4</powermock.version>
+        <org.json.version.range>3.0.0.wso2v1</org.json.version.range>
     </properties>
 </project>
