@@ -28,7 +28,7 @@ public class ServiceComponent {
             }
             log.info("OPA authorization handler bundle is activated");
         } catch (Throwable throwable) {
-            log.error("Error while starting identity appplication OPA component", throwable);
+            log.error("Error while starting identity application OPA component", throwable);
         }
     }
 }

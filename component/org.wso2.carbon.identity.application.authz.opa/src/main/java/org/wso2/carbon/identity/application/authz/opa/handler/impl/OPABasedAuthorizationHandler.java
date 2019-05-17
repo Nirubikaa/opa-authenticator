@@ -42,11 +42,10 @@ public class OPABasedAuthorizationHandler extends AbstractPostAuthnHandler {
         JSONObject query = new JSONObject("{'input': { 'user':'bob', 'method':'POST'}}");
 
         try {
-            OpaDecision client = new OpaDecision.Builder("policy2", "opa")
+            OpaDecision client = new OpaDecision.Builder("policy", "opa")
                     .query(query)
                     .build();
             boolean resp = client.getResponse();
-            System.out.println(resp);
 
             if(resp) {
                 return PostAuthnHandlerFlowStatus.SUCCESS_COMPLETED;
